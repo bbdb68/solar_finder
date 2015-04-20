@@ -69,11 +69,11 @@ module extremite()
     rotate([0,90,0])
     cylinder(d=3,h=100,center=true,$fn=100);
     // trou pour le tenon
-    translate([0,0,-13])       
+    translate([0,0,-15])       
    cube([100,largeur_barre/2,h_tenon/3],center=true);
    }
 }
-translate([-40,largueur_aronde/2,55])
+translate([-35,largueur_aronde/2,55])
 extremite();
-translate([+80,largueur_aronde/2,55])
+translate([+75,largueur_aronde/2,55])
 extremite();
