@@ -64,7 +64,12 @@ module extremite()
 {
    difference()
    {
-    cube([ep_tenon,40,40],center=true);
+    minkowski ()
+    {
+    cube([ep_tenon/30,40,40],center=true);
+    rotate([0,90,0])
+    cylinder(h=ep_tenon,r=2,$fn=60);
+    }
     // trou de visee
     rotate([0,90,0])
     cylinder(d=3,h=100,center=true,$fn=100);
@@ -73,7 +78,7 @@ module extremite()
    cube([100,largeur_barre/2,h_tenon/3],center=true);
    }
 }
-translate([-35,largueur_aronde/2,55])
+translate([-40,largueur_aronde/2,55])
 extremite();
-translate([+75,largueur_aronde/2,55])
+translate([+80,largueur_aronde/2,55])
 extremite();
